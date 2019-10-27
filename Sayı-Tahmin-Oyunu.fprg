@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Oktay"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-27 03:11:12 &#214;&#214;"/>
+        <attribute name="created" value="T2t0YXk7REVTS1RPUC1QSVE5U09OOzIwMTktMTAtMjc7MDM6MDQ6Mzkgw5bDljszMTkw"/>
+        <attribute name="edited" value="T2t0YXk7REVTS1RPUC1QSVE5U09OOzIwMTktMTAtMjc7MDM6MTE6MTIgw5bDljsxOzMyODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tahmin, rastgele, sefer" type="Integer" array="False" size=""/>
+            <assign variable="sefer" expression="0"/>
+            <assign variable="tahmin" expression="0"/>
+            <assign variable="rastgele" expression="Random(100)"/>
+            <output expression="rastgele" newline="True"/>
+            <do expression="tahmin!=rastgele">
+                <input variable="tahmin"/>
+                <if expression="tahmin!=rastgele">
+                    <then>
+                        <if expression="tahmin&gt;rastgele">
+                            <then>
+                                <output expression="&quot;Daha k&#252;&#231;&#252;k say&#305; giriniz.&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Daha b&#252;y&#252;k say&#305; giriniz.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="sefer" expression="sefer+1"/>
+            </do>
+            <output expression="&quot;Tebrikler, do&#287;ru say&#305;y&#305; &quot;&amp; sefer &amp; &quot;. seferde buldunuz.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

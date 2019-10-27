@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Oktay"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-27 09:31:33 &#214;S"/>
+        <attribute name="created" value="T2t0YXk7REVTS1RPUC1QSVE5U09OOzIwMTktMTAtMjc7MDg6NTE6MzEgw5ZTOzMwNTg="/>
+        <attribute name="edited" value="T2t0YXk7REVTS1RPUC1QSVE5U09OOzIwMTktMTAtMjc7MDk6MzE6MzMgw5ZTOzE7MzE2Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="birler, onlar, y&#252;zler, binler, onbinler, sayi, uzunluk" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="0"/>
+            <assign variable="uzunluk" expression="0"/>
+            <do expression="uzunluk&gt;5">
+                <input variable="sayi"/>
+                <assign variable="uzunluk" expression="Len(ToString(sayi))"/>
+                <if expression="sayi&gt;0">
+                    <then>
+                        <if expression="uzunluk&lt;=5">
+                            <then>
+                                <assign variable="birler" expression="sayi%10"/>
+                                <assign variable="onlar" expression="(sayi/10)%10"/>
+                                <assign variable="y&#252;zler" expression="(sayi/100)%10"/>
+                                <assign variable="binler" expression="(sayi/1000)%10"/>
+                                <assign variable="onbinler" expression="(sayi/10000)%10"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Maksimum 5 basamakl&#305; say&#305; giriniz.&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Pozitif say&#305; giriniz.&quot;" newline="True"/>
+                    </else>
+                </if>
+            </do>
+            <output expression="&quot;Basamaklardaki rakamlar&#305;n karelerinin toplam&#305;= &quot;&amp; birler^2+onlar^2+y&#252;zler^2+binler^2+onbinler^2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
